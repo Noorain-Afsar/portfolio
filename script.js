@@ -22,7 +22,8 @@ const projectCopy = [
     title: 'UAE Retail Infrastructure: Regional Sales & Profit Optimization',
     tools: 'Power BI · Power Query · DAX · SQL · Python',
     description: 'Analyzed UAE retail sales data to identify trends in sales, profitability, customer segments, product performance, regional performance, and delivery patterns. Cleaned and prepared the dataset using Python, validated and analyzed the data using SQL, and developed an interactive Power BI dashboard using Power Query and DAX to visualize key KPIs and communicate business insights.',
-    workflow: 'Raw UAE Retail Data ➔ Python & Pandas ➔ Data Cleaning & Preparation ➔ SQL Validation & Analysis ➔ Power Query ➔ DAX Measures ➔ Power BI Dashboard ➔ Business Insights'
+    workflow: 'Raw UAE Retail Data ➔ Python & Pandas ➔ Data Cleaning & Preparation ➔ SQL Validation & Analysis ➔ Power Query ➔ DAX Measures ➔ Power BI Dashboard ➔ Business Insights',
+    skills: ['Data Cleaning & Transformation', 'Python & Pandas', 'SQL Analysis', 'Power Query', 'DAX', 'Power BI', 'Data Visualization', 'KPI Analysis', 'Profitability Analysis', 'Business Insights']
   },
   {
     title: 'E-Commerce Data Model Optimization & DAX Analytics',
