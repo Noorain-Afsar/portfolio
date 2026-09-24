@@ -3,61 +3,88 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Noorain Afsar, a Data Analyst and Business Development professional based in Abu Dhabi.">
-  <title>Noorain Afsar | Data Analyst & Business Development</title>
+  <meta name="description" content="Portfolio of Noorain Afsar, a Data Scientist and Data Analyst based in Abu Dhabi.">
+  <title>Noorain Afsar | Data Scientist & Data Analyst</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=forest-reference-7">
 </head>
 <body>
   <div class="site-shell">
     <header class="topbar">
-      <a class="brand" href="#top" aria-label="Noorain Afsar home"><span>NA</span><strong>NOORAIN<br>AFSAR</strong></a>
+      <a class="brand" href="#top" aria-label="Noorain Afsar home"><span>NA</span><strong>NOORAIN AFSAR</strong></a>
       <nav class="nav" aria-label="Main navigation">
-        <a href="#showcase">Work</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html?page=home">Home</a>
+        <a href="index.html?page=about">About</a>
+        <a href="index.html?page=projects">Projects</a>
+        <a href="index.html?page=experience">Experience</a>
+        <a href="index.html?page=education">Education</a>
+        <a href="index.html?page=contact">Contact</a>
       </nav>
       <a class="top-link" href="Noorain%20Afsar.pdf" download>Download CV <span>↗</span></a>
     </header>
 
     <main id="top">
-      <section class="hero section-grid">
+      <section class="home-section" id="home">
+      <section class="hero section-grid" id="hero">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span> Available for meaningful opportunities · Abu Dhabi, UAE</p>
-          <h1>I turn messy data<br>into <em>clear action.</em></h1>
-          <p class="hero-intro">Data Analyst and Business Development professional in Abu Dhabi, translating customer, market, and operational signals into decisions that move work forward.</p>
+          <p class="eyebrow"><span class="status-dot"></span><span>Available for meaningful opportunities<br>Abu Dhabi, UAE</span></p>
+          <h1>Data science<br>into <em>clear action.</em></h1>
+          <p class="hero-intro">Data Scientist and Data Analyst in Abu Dhabi, translating customer, market, and operational signals into decisions that move work forward.</p>
           <div class="hero-actions">
-            <a class="button button-dark" href="#contact">Let's connect <span>↗</span></a>
+            <a class="button button-dark" href="index.html?page=contact">Let's connect <span>↗</span></a>
             <a class="text-link" href="Noorain%20Afsar.pdf" download>View resume <span>↓</span></a>
           </div>
         </div>
         <div class="hero-aside">
           <div class="portrait-mark"><img src="images/Image%20Noor.png" alt="Portrait of Noorain Afsar"></div>
-          <p class="aside-note">Data Analyst<br>& Business Development</p>
-          <div class="hero-index">01 <span>/</span> 04</div>
+          <p class="aside-note">Data Scientist &amp; Data Analyst</p>
+          <div class="hero-index">01 / 04</div>
         </div>
       </section>
 
-      <section class="proof-strip">
-        <div><strong>25%</strong><span>faster information retrieval<br>through SQL asset analysis</span></div>
-        <div><strong>5+</strong><span>years across data, technology,<br>and business operations</span></div>
-        <div><strong>4</strong><span>professional certifications<br>earned in 2026</span></div>
-        <div><strong>15+</strong><span>tools across analytics,<br>BI, and operations</span></div>
+      <section class="proof-strip" id="statistics">
+        <div><svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h16M7 15l3-4 3 2 5-7"/></svg><strong>25%</strong><span>Faster information retrieval<br>through advanced SQL analysis</span></div>
+        <div><svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5h8v2M3 12h18M10 12v2h4v-2"/></svg><strong>5+</strong><span>Years across data analytics,<br>technology, business intelligence,<br>and operations</span></div>
+        <div><svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM15 3v4h4M9 13l2 2 4-4"/></svg><strong>4+</strong><span>Professional certifications<br>earned</span></div>
+        <div><svg class="stat-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><strong>15+</strong><span>Tools across analytics,<br>cloud, and BI pipelines</span></div>
+      </section>
       </section>
 
-      <section class="statement section-grid" id="about">
-        <p class="section-label">/ PROFILE</p>
-        <div>
-          <h2>Analytical by nature.<br><span>Commercial in practice.</span></h2>
-          <p class="body-copy">With experience across data analytics, business intelligence, front-end development, technical support, and commercial operations, I bring a rare view of how the numbers connect to the work behind them.</p>
+      <section class="statement" id="about">
+        <div class="section-heading about-heading"><p class="section-label">/ ABOUT ME</p><p class="muted">Profile · skills · technologies</p></div>
+        <div class="about-layout">
+          <aside class="profile-card">
+            <div class="profile-photo"><img src="images/Image%20Noor.png" alt="Portrait of Noorain Afsar"></div>
+            <h2>Noorain Afsar</h2>
+            <p class="profile-title">Data Scientist &amp; Data Analyst<br>Abu Dhabi, UAE</p>
+            <div class="profile-links">
+              <a href="mailto:noorainafsar8@gmail.com">noorainafsar8@gmail.com</a>
+              <a href="https://www.linkedin.com/in/noorain-afsar-72119321a" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
+              <a href="https://github.com/Noorain-Afsar" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+              <a href="tel:+971529142387">+971 52 914 2387</a>
+            </div>
+          </aside>
+          <div class="about-main">
+            <h2>Analytical by nature.<br><span>Commercial in practice.</span></h2>
+            <p class="body-copy">With experience across data analytics, business intelligence, front-end development, technical support, and commercial operations, I bring a rare view of how the numbers connect to the work behind them.</p>
+            <p class="body-copy">By building optimized data workflows in Python and SQL alongside modern cloud infrastructure, I ensure data environments are scalable, accessible, and commercially viable. My mission is transforming complex datasets into actionable strategies that drive business growth.</p>
+            <p class="body-copy">What sets me apart is my ability to bridge technical complexity with business clarity, translating data signals into decisions that move work forward.</p>
+            <div class="skills-breakdown" id="capabilities">
+              <div class="skill-card"><h3>Programming</h3><ul><li>Python</li><li>SQL</li><li>JavaScript / HTML / CSS</li></ul></div>
+              <div class="skill-card"><h3>Data Analytics &amp; BI</h3><ul><li>Power BI</li><li>Tableau</li><li>Excel (Advanced)</li></ul></div>
+              <div class="skill-card"><h3>Cloud &amp; Databases</h3><ul><li>AWS</li><li>Azure</li><li>PostgreSQL / MySQL</li></ul></div>
+              <div class="skill-card"><h3>Data Concepts</h3><ul><li>ETL / Data Pipeline</li><li>Data Visualization</li><li>Statistical Analysis</li><li>Predictive Modeling</li></ul></div>
+              <div class="skill-card"><h3>Soft Skills</h3><ul><li>Problem-Solving</li><li>Stakeholder Communication</li><li>Data-Driven Decision Making</li><li>Leadership &amp; Mentoring</li></ul></div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="showcase" id="showcase">
-        <div class="section-heading"><p class="section-label">/ A GLIMPSE OF THE WORK</p><p class="muted">Analytics · operations · growth</p></div>
+        <div class="section-heading"><p class="section-label">/ PROJECTS</p><p class="muted">Analytics · operations · growth</p></div>
         <div class="showcase-grid">
           <article class="work-card work-card-wide"><div class="work-visual dashboard"><div class="dash-top"><span>OPERATIONS PULSE</span><b>Q4 / LIVE</b></div><div class="dash-content"><div class="chart-bars"><i style="height:42%"></i><i style="height:64%"></i><i style="height:52%"></i><i style="height:78%"></i><i style="height:91%"></i><i style="height:73%"></i></div><div class="dash-stat"><small>REVENUE POTENTIAL</small><strong>+28.4%</strong><span>identified opportunity</span></div></div></div><div class="work-copy"><span>01 / BUSINESS INTELLIGENCE</span><h3>From operational data to a sharper business view.</h3><p>Reporting, KPI tracking, dashboards, and market signals brought together for practical decision-making.</p><div class="work-tags"><b>Power BI</b><b>SQL</b><b>Market analysis</b></div></div></article>
           <article class="work-card"><div class="work-visual segmentation"><span>01</span><div class="rings"><i></i><i></i><i></i></div><strong>CUSTOMER<br>SEGMENTS</strong></div><div class="work-copy"><span>02 / APPLIED ANALYTICS</span><h3>Finding the signal inside customer behavior.</h3><p>Segmentation and predictive thinking used to surface trends and growth opportunities.</p><div class="work-tags"><b>Python</b><b>Scikit-learn</b></div></div></article>
@@ -66,7 +93,7 @@
       </section>
 
       <section class="experience" id="work">
-        <div class="section-heading"><p class="section-label">/ EXPERIENCE</p><p class="muted">Selected career history · 2019—present</p></div>
+        <div class="section-heading"><p class="section-label">/ PROFESSIONAL EXPERIENCE</p><p class="muted">Selected career history · 2019—present</p></div>
         <div class="timeline">
           <article class="role role-current">
             <div class="role-meta"><span>01</span><span>08.2023 — Present</span></div>
@@ -83,23 +110,25 @@
         </div>
       </section>
 
-      <section class="capabilities section-grid" id="capabilities">
-        <p class="section-label">/ CAPABILITIES</p>
-        <div class="capability-grid">
-          <div class="capability"><span class="number">01</span><h3>Data & BI</h3><p>Python, Pandas, SQL, Excel, Oracle, Power BI, Tableau, DAX, data visualization, KPI reporting.</p></div>
-          <div class="capability"><span class="number">02</span><h3>Applied analytics</h3><p>Machine learning, predictive analytics, customer trends, market segmentation, and Jupyter-based exploration.</p></div>
-          <div class="capability"><span class="number">03</span><h3>Business growth</h3><p>Market research, competitor analysis, stakeholder management, proposals, tenders, and process improvement.</p></div>
-          <div class="capability"><span class="number">04</span><h3>Operations & IT</h3><p>Government and client portals, IT support, troubleshooting, access workflows, documentation, and records.</p></div>
-        </div>
-      </section>
-
-      <section class="certificates" id="certificates">
-        <div class="section-heading"><p class="section-label">/ CREDENTIALS</p><p class="muted">London International Studies & Research Center · 01.2026</p></div>
+      <section class="education-certificates" id="education-certificates">
+      <section class="certificates">
+        <div class="section-heading"><p class="section-label">/ CERTIFICATES</p><p class="muted">London International Studies & Research Center · 01.2026</p></div>
         <div class="certificate-list">
           <div><span class="certificate-index">01</span><h3>Certified AI Engineer</h3><span class="certificate-note">KHDA-Approved</span></div>
           <div><span class="certificate-index">02</span><h3>Certified Data Science & Machine Learning</h3><span class="certificate-note">KHDA-Approved</span></div>
           <div><span class="certificate-index">03</span><h3>Certified Data Analyst</h3><span class="certificate-note">KHDA-Approved</span></div>
           <div><span class="certificate-index">04</span><h3>LCCI Certification</h3><span class="certificate-note">CPD Accredited · London Chamber of Commerce and Industry</span></div>
+        </div>
+      </section>
+
+      <section class="resume-panel" id="resume">
+        <div>
+          <p class="section-label">/ RESUME / CV</p>
+          <h2>One document.<br><span>The full picture.</span></h2>
+        </div>
+        <div class="resume-action">
+          <p>Download my complete experience, education, skills, and certifications in one concise CV.</p>
+          <a class="button button-dark" href="Noorain%20Afsar.pdf" download>Download CV <span>↓</span></a>
         </div>
       </section>
 
@@ -110,6 +139,7 @@
           <div><span>2015 — 2018</span><h3>Diploma</h3><p>Computer Science & Engineering<br>D Banumaiah's Polytechnic · Karnataka, India</p></div>
         </div>
       </section>
+      </section>
 
       <section class="contact" id="contact">
         <p class="section-label">/ CONTACT</p>
@@ -119,6 +149,7 @@
     </main>
     <footer><span>© 2026 Noorain Afsar</span><span>Data · Insight · Action</span></footer>
   </div>
+  <a class="whatsapp-float" href="https://wa.me/971529142387?text=Hi%20Noorain%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noreferrer" aria-label="Message Noorain on WhatsApp" title="Message on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.1a9.8 9.8 0 0 0-8.45 14.77L2.1 21.9l5.18-1.4A9.8 9.8 0 1 0 12 2.1Zm0 17.8a8 8 0 0 1-4.08-1.12l-.3-.18-3.08.83.82-3-.2-.31A8 8 0 1 1 12 19.9Zm4.4-5.97c-.24-.12-1.4-.69-1.62-.77-.22-.08-.38-.12-.54.12-.16.24-.62.77-.76.93-.14.16-.28.18-.52.06a6.53 6.53 0 0 1-1.9-1.17 7.1 7.1 0 0 1-1.31-1.63c-.14-.24-.02-.37.1-.49.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.4h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.15 1.52.09.46-.07 1.4-.57 1.6-1.12.2-.55.2-1.02.14-1.12-.06-.1-.22-.16-.46-.28Z"/></svg></a>
   <script src="script.js"></script>
 </body>
 </html>
