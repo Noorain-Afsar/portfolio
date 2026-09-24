@@ -6,6 +6,51 @@ document.querySelectorAll('.project-skills strong').forEach((label) => {
   }
 });
 
+const projectCards = document.querySelectorAll('.showcase .project-card');
+const projectCopy = [
+  {
+    title: 'US Retail Sales Analytics',
+    tools: 'Excel · Python · Pandas · SQL · Tableau',
+    description: 'Analyzed retail sales data to identify trends in sales, profitability, customer segments, product and regional performance, and discount impact. Cleaned and transformed the dataset using Python and SQL, performed exploratory data analysis, and developed an interactive Tableau dashboard to communicate key business insights and support data-driven decision-making.',
+    workflow: 'Raw Data Ingestion ➔ ETL Pipeline (Pandas) ➔ Data Cleaning & Transformation ➔ Relational SQL Modeling ➔ Exploratory Analysis (EDA) ➔ Tableau Interactive Architecture ➔ Business Insights'
+  },
+  {
+    title: 'US Retail Profitability Analytics',
+    description: 'Built a deep-dive financial diagnostics dashboard in Tableau to isolate and analyze regional profitability drivers across complex product categories. Engineered custom Tableau calculations, dynamic parameter actions, and forecasting analysis to surface hidden margin leakages. The resulting interface allows operations managers to instantly cross-reference quarterly profit trajectories with regional discount impacts to safeguard retail margins.'
+  },
+  {
+    title: 'UAE Retail Infrastructure: Regional Sales & Profit Optimization',
+    tools: 'Power BI · Power Query · DAX · SQL · Python',
+    description: 'Analyzed UAE retail sales data to identify trends in sales, profitability, customer segments, product performance, regional performance, and delivery patterns. Cleaned and prepared the dataset using Python, validated and analyzed the data using SQL, and developed an interactive Power BI dashboard using Power Query and DAX to visualize key KPIs and communicate business insights.',
+    workflow: 'Raw UAE Retail Data ➔ Python & Pandas ➔ Data Cleaning & Preparation ➔ SQL Validation & Analysis ➔ Power Query ➔ DAX Measures ➔ Power BI Dashboard ➔ Business Insights'
+  },
+  {
+    title: 'E-Commerce Data Model Optimization & DAX Analytics',
+    description: 'Analyzed e-commerce data to evaluate sales, profitability, customer activity, order performance, product metrics, and year-over-year trends through an optimized analytical model and DAX analytics.',
+    workflow: 'E-Commerce Data Schema ➔ Data Model Design ➔ DAX Measures ➔ Performance Matrices ➔ Stakeholder Strategy Insights'
+  },
+  {
+    tools: 'Python · SQL · Power BI',
+    description: 'Analyzed Amazon sales data to evaluate sales and profitability across categories, regions, and other business dimensions. Cleaned and prepared the dataset using Python, checked and analyzed the data using SQL, and developed an interactive Power BI dashboard to visualize total sales, total profit, profit by category, profit by region, and other key performance metrics.',
+    workflow: 'Raw Data ➔ Python ➔ Data Cleaning ➔ SQL Validation & Analysis ➔ Power BI ➔ Interactive Dashboard & Insights',
+    skills: ['Python & Pandas', 'SQL', 'Data Cleaning', 'Data Validation', 'Sales Analysis', 'Profitability Analysis', 'Data Visualization', 'Power BI', 'KPI Analysis']
+  }
+];
+
+projectCards.forEach((card, index) => {
+  const copy = projectCopy[index];
+  if (!copy) return;
+  if (copy.title) card.querySelector('h2').textContent = copy.title;
+  if (copy.tools) card.querySelector('.project-tools').textContent = copy.tools;
+  if (copy.description) card.querySelector('.project-content > p:not(.project-tools)').textContent = copy.description;
+  if (copy.workflow) card.querySelector('.project-workflow span').textContent = copy.workflow;
+  if (copy.skills) {
+    const skillsList = card.querySelector('.project-skills ul');
+    skillsList.innerHTML = copy.skills.map((skill) => `<li>${skill}</li>`).join('');
+    card.querySelector('.project-skills strong').textContent = 'Key Skills Demonstrated';
+  }
+});
+
 const pageSections = {
   home: 'home',
   about: 'about',
