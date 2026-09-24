@@ -12,7 +12,7 @@ const projectCopy = [
     title: 'US Retail Sales Analytics',
     tools: 'Excel · Python · Pandas · SQL · Tableau',
     description: 'Analyzed retail sales data to identify trends in sales, profitability, customer segments, product and regional performance, and discount impact. Cleaned and transformed the dataset using Python and SQL, performed exploratory data analysis, and developed an interactive Tableau dashboard to communicate key business insights and support data-driven decision-making.',
-    workflow: 'Raw Data Ingestion ➔ ETL Pipeline (Pandas) ➔ Data Cleaning & Transformation ➔ Relational SQL Modeling ➔ Exploratory Analysis (EDA) ➔ Tableau Interactive Architecture ➔ Business Insights'
+    workflow: 'Raw Data ➔ Python & Pandas ➔ Data Cleaning ➔ SQL Analysis ➔ EDA ➔ Tableau ➔ Dashboard ➔ Business Insights'
   },
   {
     title: 'US Retail Profitability Analytics',
@@ -34,7 +34,7 @@ const projectCopy = [
     tools: 'Python · SQL · Power BI',
     description: 'Analyzed Amazon sales data to evaluate sales and profitability across categories, regions, and other business dimensions. Cleaned and prepared the dataset using Python, checked and analyzed the data using SQL, and developed an interactive Power BI dashboard to visualize total sales, total profit, profit by category, profit by region, and other key performance metrics.',
     workflow: 'Raw Data ➔ Python ➔ Data Cleaning ➔ SQL Validation & Analysis ➔ Power BI ➔ Interactive Dashboard & Insights',
-    skills: ['Python & Pandas', 'SQL', 'Data Cleaning', 'Data Validation', 'Sales Analysis', 'Profitability Analysis', 'Data Visualization', 'Power BI', 'KPI Analysis']
+    skills: ['Data Cleaning & Transformation', 'Python & Pandas', 'SQL Analysis', 'Power BI', 'Data Visualization', 'Sales Analysis', 'Profitability Analysis', 'Regional Analysis', 'Business Insights']
   }
 ];
 
