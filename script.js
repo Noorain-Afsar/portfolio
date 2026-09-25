@@ -56,7 +56,6 @@ const pageSections = {
   home: 'home',
   about: 'about',
   projects: 'showcase',
-  studio: 'studio',
   experience: 'work',
   education: 'education-certificates',
   contact: 'contact'
@@ -118,6 +117,21 @@ if (selectedSection) {
 }
 
 const routeLinks = document.querySelectorAll('.nav a, .mobile-menu a');
+const setActiveNavigation = (page) => {
+  routeLinks.forEach((link) => {
+    const linkPage = new URL(link.href).searchParams.get('page') || 'home';
+    const isActive = linkPage === page;
+    link.classList.toggle('is-active', isActive);
+    if (isActive) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+};
+
+setActiveNavigation(activePage);
+
 routeLinks.forEach((link) => {
   const linkPage = new URL(link.href).searchParams.get('page');
   if (!linkPage || !pageSections[linkPage]) return;
@@ -127,6 +141,7 @@ routeLinks.forEach((link) => {
     const sectionId = pageSections[linkPage];
     window.history.pushState({}, '', link.href);
     document.body.dataset.page = linkPage;
+    setActiveNavigation(linkPage);
     topLevelSections.forEach((section) => section.classList.add('route-hidden'));
     document.getElementById(sectionId)?.classList.remove('route-hidden');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -172,46 +187,4 @@ if (homeProjectGallery) {
   homeProjectGallery.addEventListener('focusin', () => window.clearInterval(homeProjectTimer));
   homeProjectGallery.addEventListener('focusout', startHomeProjectRotation);
   startHomeProjectRotation();
-}
-
-const studioCases = {
-  retail: { label: 'RETAIL SIGNAL', title: 'Find the margin leak.', copy: 'Compare discount depth with regional profit to see where growth is quietly becoming expensive.', tool: 'Tableau · SQL · Python', result: 'Decision: protect high-volume margin' },
-  uae: { label: 'UAE GROWTH', title: 'Read the regional pulse.', copy: 'Map sales velocity across emirates to make inventory and distribution decisions with more confidence.', tool: 'Power BI · DAX · Power Query', result: 'Decision: rebalance regional supply' },
-  commerce: { label: 'E-COMMERCE', title: 'Make demand visible.', copy: 'Connect product, customer, and order signals to see which categories are creating durable value.', tool: 'Power BI · SQL · Python', result: 'Decision: focus the product mix' }
-};
-const studioLenses = {
-  performance: { label: 'PERFORMANCE', shift: '01—03' },
-  customers: { label: 'CUSTOMERS', shift: '02—03' },
-  operations: { label: 'OPERATIONS', shift: '03—03' }
-};
-const studio = document.querySelector('.virtual-studio');
-if (studio) {
-  let activeCase = 'retail';
-  let activeLens = 'performance';
-  const renderStudio = () => {
-    const currentCase = studioCases[activeCase];
-    const currentLens = studioLenses[activeLens];
-    studio.querySelector('#studio-output-case').textContent = `${currentCase.label} / ${currentLens.label}`;
-    studio.querySelector('#studio-output-index').textContent = currentLens.shift;
-    studio.querySelector('#studio-output-title').textContent = currentCase.title;
-    studio.querySelector('#studio-output-copy').textContent = currentCase.copy;
-    studio.querySelector('#studio-output-tool').textContent = currentCase.tool;
-    studio.querySelector('#studio-output-result').textContent = currentCase.result;
-  };
-  studio.querySelectorAll('[data-studio-case]').forEach((button) => button.addEventListener('click', () => {
-    activeCase = button.dataset.studioCase;
-    studio.querySelectorAll('[data-studio-case]').forEach((item) => item.classList.toggle('is-selected', item === button));
-    renderStudio();
-  }));
-  studio.querySelectorAll('[data-studio-lens]').forEach((button) => button.addEventListener('click', () => {
-    activeLens = button.dataset.studioLens;
-    studio.querySelectorAll('[data-studio-lens]').forEach((item) => item.classList.toggle('is-selected', item === button));
-    renderStudio();
-  }));
-  studio.querySelector('#studio-activate').addEventListener('click', () => {
-    studio.classList.toggle('is-active');
-    const isActive = studio.classList.contains('is-active');
-    studio.querySelector('#studio-session-status').textContent = isActive ? 'live and exploring' : 'ready to activate';
-    studio.querySelector('.studio-button-label').textContent = isActive ? 'Pause studio' : 'Activate studio';
-  });
 }
