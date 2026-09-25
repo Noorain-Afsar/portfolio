@@ -74,6 +74,35 @@ document.querySelectorAll('.nav a').forEach((link) => {
   }
 });
 
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+if (menuToggle && mobileMenu) {
+  const setMenuState = (isOpen) => {
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    mobileMenu.classList.toggle('is-open', isOpen);
+  };
+
+  menuToggle.addEventListener('click', () => {
+    setMenuState(menuToggle.getAttribute('aria-expanded') !== 'true');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+      setMenuState(false);
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setMenuState(false);
+  });
+}
+
 if (selectedSection) {
   topLevelSections.forEach((section) => {
     section.classList.add('route-hidden');
