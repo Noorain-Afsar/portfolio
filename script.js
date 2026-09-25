@@ -65,6 +65,7 @@ const requestedPage = new URLSearchParams(window.location.search).get('page');
 const selectedSection = pageSections[requestedPage];
 const topLevelSections = document.querySelectorAll('main > section');
 const activePage = pageSections[requestedPage] ? requestedPage : 'home';
+const isMobileLayout = window.matchMedia('(max-width: 1000px)').matches || window.matchMedia('(pointer: coarse)').matches;
   document.body.dataset.page = activePage;
 document.querySelectorAll('.nav a').forEach((link) => {
   const linkPage = new URL(link.href).searchParams.get('page') || 'home';
@@ -103,17 +104,19 @@ if (menuToggle && mobileMenu) {
   });
 }
 
-if (selectedSection) {
-  topLevelSections.forEach((section) => {
-    section.classList.add('route-hidden');
-  });
-  document.getElementById(selectedSection)?.classList.remove('route-hidden');
-} else {
-  topLevelSections.forEach((section) => {
-    if (section.id !== 'home') {
+if (isMobileLayout) {
+  if (selectedSection) {
+    topLevelSections.forEach((section) => {
       section.classList.add('route-hidden');
-    }
-  });
+    });
+    document.getElementById(selectedSection)?.classList.remove('route-hidden');
+  } else {
+    topLevelSections.forEach((section) => {
+      if (section.id !== 'home') {
+        section.classList.add('route-hidden');
+      }
+    });
+  }
 }
 
 const revealObserver = new IntersectionObserver((entries) => {
