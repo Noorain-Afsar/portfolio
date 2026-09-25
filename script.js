@@ -116,6 +116,22 @@ if (selectedSection) {
   });
 }
 
+const routeLinks = document.querySelectorAll('.nav a, .mobile-menu a');
+routeLinks.forEach((link) => {
+  const linkPage = new URL(link.href).searchParams.get('page');
+  if (!linkPage || !pageSections[linkPage]) return;
+
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const sectionId = pageSections[linkPage];
+    window.history.pushState({}, '', link.href);
+    document.body.dataset.page = linkPage;
+    topLevelSections.forEach((section) => section.classList.add('route-hidden'));
+    document.getElementById(sectionId)?.classList.remove('route-hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
