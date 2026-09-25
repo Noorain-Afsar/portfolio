@@ -1,5 +1,5 @@
 	/* Route views: Home is the only default section; nav routes reveal one section. */
-	main>section{display:block!important}
+	main>section{display:none!important}
 	body:not([data-page]) main>#home{display:block!important}
 	body[data-page="home"] main>#home,
 	body[data-page="about"] main>#about,
