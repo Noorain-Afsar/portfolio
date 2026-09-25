@@ -670,3 +670,10 @@ a:focus-visible,.button:focus-visible{outline:2px solid #4a6958;outline-offset:4
 	.proof-strip span{min-width:0;font-size:9px;line-height:1.45;overflow-wrap:anywhere}
 	.skills-motion{margin:0 -6vw;width:auto}
 }
+
+body[data-page="home"] main>#home:not(.route-hidden),
+body[data-page="about"] main>#about:not(.route-hidden),
+body[data-page="projects"] main>#showcase:not(.route-hidden),
+body[data-page="experience"] main>#work:not(.route-hidden),
+body[data-page="education"] main>#education-certificates:not(.route-hidden),
+body[data-page="contact"] main>#contact:not(.route-hidden){display:block!important}
